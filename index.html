@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios de Posicionamento CSS</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- 4. Fixed no cabeçalho -->
+  <header class="cabecalho-fixed">
+    📌 Cabeçalho Fixo (position: fixed) — sempre no topo
+  </header>
+
+  <!-- 7. Overlay com fixed (controlado por :target) -->
+  <div id="overlay" class="overlay-fixed">
+    <h2>Overlay com position: fixed</h2>
+    <p>Este overlay cobre toda a tela com fundo semi-transparente. Ele é fixo e fica acima de todo o conteúdo.</p>
+    <a href="#">Fechar overlay</a>
+  </div>
+
+  <div class="container" id="topo">
+    <h1>Exercícios de Posicionamento CSS</h1>
+    <p class="intro">Demonstração de todos os 10 exercícios de <code>position</code> em HTML e CSS puro.</p>
+
+    <!-- 1. Elemento Estático -->
+    <section class="exemplo">
+      <h2>1. Elemento Estático (padrão)</h2>
+      <p>Todos os elementos são <code>position: static</code> por padrão. Eles seguem o fluxo normal do documento.</p>
+      <div class="static-demo">
+        <div class="box-demo">Primeiro elemento (static)</div>
+        <div class="box-demo">Segundo elemento (static)</div>
+        <div class="box-demo">Terceiro elemento (static)</div>
+        <p class="nota">A ordem no HTML define a ordem vertical. Nenhum deslocamento é aplicado.</p>
+      </div>
+    </section>
+
+    <!-- 2. Elemento Relativo -->
+    <section class="exemplo">
+      <h2>2. Elemento Relativo</h2>
+      <p>O elemento é movido 20px para a direita e 50px para baixo, mas mantém seu espaço original no fluxo.</p>
+      <div class="box-demo">Elemento normal (antes)</div>
+      <div class="box-demo relative-box">Elemento relative (top: 50px; left: 20px)</div>
+      <div class="box-demo">Elemento normal (depois — o espaço do relative é preservado)</div>
+    </section>
+
+    <!-- 3. Elemento Absoluto dentro de pai relative -->
+    <section class="exemplo">
+      <h2>3. Elemento Absoluto dentro de pai relative</h2>
+      <p>O pai tem <code>position: relative</code> e o filho <code>position: absolute</code> é posicionado em relação a ele.</p>
+      <div class="pai-relative">
+        <p>Pai com position: relative</p>
+        <div class="filho-absolute">Filho absolute (top: 20px; right: 30px)</div>
+        <p class="texto-pai">O filho absolute é removido do fluxo e posicionado no canto superior direito do pai.</p>
+      </div>
+    </section>
+
+    <!-- 4. Fixed no cabeçalho -->
+    <section class="exemplo">
+      <h2>4. Cabeçalho Fixo</h2>
+      <p>O cabeçalho no topo da página usa <code>position: fixed</code> e permanece visível ao rolar.</p>
+      <p>Role a página para ver que ele não se move.</p>
+      <div class="caixa-info">
+        ⬆️ Role para cima e para baixo — o cabeçalho preto continua fixo no topo.
+      </div>
+    </section>
+
+    <!-- 5. Sticky no Menu de Navegação -->
+    <section class="exemplo">
+      <h2>5. Menu Sticky</h2>
+      <p>O menu abaixo tem <code>position: sticky</code> e <code>top: 0</code>. Ele "gruda" no topo quando você rola até ele.</p>
+      <div class="menu-sticky">📌 Menu Sticky (position: sticky; top: 0)</div>
+      <p>Role a página devagar. Quando o menu atingir o topo, ele ficará fixo até o fim do seu contêiner.</p>
+      <div class="caixa-info">
+        ⬇️ Role para ver o menu grudar no topo.
+      </div>
+    </section>
+
+    <!-- 6. Elemento Absoluto Fora da Tela -->
+    <section class="exemplo">
+      <h2>6. Elemento Absoluto Fora da Tela</h2>
+      <p>Uma div com <code>position: absolute</code> e valores negativos de <code>top</code> e <code>left</code> é movida para fora da tela.</p>
+      <div class="pai-fora-tela">
+        <p>Pai (relative) com overflow: hidden para visualização</p>
+        <div class="fora-tela">Estou fora da tela (top: -80px; left: -120px)</div>
+      </div>
+      <p>O elemento continua no layout, mas está posicionado fora da área visível do pai.</p>
+    </section>
+
+    <!-- 7. Overlay com fixed -->
+    <section class="exemplo">
+      <h2>7. Overlay com position: fixed</h2>
+      <p>Clique no botão abaixo para abrir um overlay que cobre toda a tela com fundo semi-transparente. O overlay usa <code>position: fixed</code> e fica acima de todo o conteúdo.</p>
+      <a href="#overlay" class="btn-overlay">Abrir overlay (fixed)</a>
+      <p class="nota">O overlay é uma camada fixa com <code>background: rgba(0,0,0,0.75)</code> e um link para fechar.</p>
+      <p class="nota"><em>Nota: usamos <code>:target</code> para controlar a abertura/fechamento sem JavaScript.</em></p>
+    </section>
+
+    <!-- 8. Relative dentro de absolute -->
+    <section class="exemplo">
+      <h2>8. Relative dentro de absolute</h2>
+      <p>Uma div <code>relative</code> dentro de uma div <code>absolute</code>. A relativa é deslocada dentro da absoluta.</p>
+      <div class="exemplo-relative-absolute">
+        <div class="pai-absolute">
+          <p>Pai absolute (top: 200px; left: 50px) — em relação ao body</p>
+          <div class="filho-relative-dentro-absolute">Filho relative (top: 20px; left: 40px)</div>
+        </div>
+      </div>
+      <p>O pai absolute é posicionado em relação ao body. O filho relative é deslocado em relação à sua posição normal dentro do pai.</p>
+    </section>
+
+    <!-- 9. Botão fixed no canto inferior direito -->
+    <section class="exemplo">
+      <h2>9. Botão Fixed no Canto Inferior Direito</h2>
+      <p>O botão verde no canto inferior direito usa <code>position: fixed</code> e permanece visível sempre.</p>
+      <p>Role a página para ver que ele não se move.</p>
+      <div class="caixa-info info-verde">
+        ⬇️ O botão "Voltar ao topo (fixed)" está no canto inferior direito.
+      </div>
+    </section>
+
+    <!-- 10. Scroll com Sticky -->
+    <section class="exemplo">
+      <h2>10. Scroll com Sticky</h2>
+      <p>Uma div <code>sticky</code> dentro de um contêiner com rolagem. Ela fica fixa no topo do contêiner enquanto o conteúdo rola.</p>
+      <div class="conteudo-rolavel">
+        <div class="sticky-conteudo">📌 Sticky (top: 10px) — role o conteúdo abaixo</div>
+        <p>Conteúdo de rolagem 1</p>
+        <p>Conteúdo de rolagem 2</p>
+        <p>Conteúdo de rolagem 3</p>
+        <p>Conteúdo de rolagem 4</p>
+        <p>Conteúdo de rolagem 5</p>
+        <p>Conteúdo de rolagem 6</p>
+        <p>Conteúdo de rolagem 7</p>
+        <p>Conteúdo de rolagem 8</p>
+        <p>Conteúdo de rolagem 9</p>
+        <p>Conteúdo de rolagem 10</p>
+      </div>
+      <p>O sticky só funciona dentro do contêiner com rolagem. Ele "gruda" no topo (top: 10px) enquanto o conteúdo rola.</p>
+    </section>
+
+    <footer class="rodape">
+      <p>Site de demonstração — todos os 10 exercícios de posicionamento CSS.</p>
+      <p class="rodape-pequeno">HTML e CSS puro, sem JavaScript.</p>
+    </footer>
+  </div>
+
+  <!-- 9. Botão fixed no canto inferior direito (sem JS) -->
+  <a href="#topo" class="botao-fixed">⬆️ Voltar ao topo</a>
+
+</body>
+</html>

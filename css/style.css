@@ -1,0 +1,395 @@
+/* ============================================
+   RESET E ESTILOS GERAIS
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1e1e2f;
+  background: #f8fafc;
+  padding-top: 70px; /* espaço para o cabeçalho fixed */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 120px; /* espaço extra para o botão fixed */
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 20px 0 10px;
+  color: #0f172a;
+  border-left: 6px solid #3b82f6;
+  padding-left: 16px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 30px 0 15px;
+  color: #1e293b;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 6px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+code {
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #be185d;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.nota {
+  color: #475569;
+  margin-top: 12px;
+}
+
+/* ============================================
+   CAIXAS DE EXEMPLO
+   ============================================ */
+.exemplo {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.box-demo {
+  background: #dbeafe;
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.caixa-info {
+  background: #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  min-height: 80px;
+}
+
+.info-verde {
+  background: #ecfdf5;
+  color: #065f46;
+  min-height: 100px;
+}
+
+/* ============================================
+   1. ELEMENTO ESTÁTICO (padrão)
+   ============================================ */
+.static-demo .box-demo {
+  /* Nenhuma posição definida = static (padrão) */
+}
+
+/* ============================================
+   2. ELEMENTO RELATIVO
+   ============================================ */
+.relative-box {
+  position: relative;
+  top: 50px;    /* move 50px para baixo */
+  left: 20px;   /* move 20px para direita */
+  background: #fde68a;
+  border-color: #f59e0b;
+  color: #78350f;
+  /* O espaço original é mantido no fluxo */
+}
+
+/* ============================================
+   3. ABSOLUTO DENTRO DE PAI RELATIVE
+   ============================================ */
+.pai-relative {
+  position: relative;
+  background: #e0f2fe;
+  border: 3px solid #0284c7;
+  border-radius: 16px;
+  padding: 30px;
+  min-height: 180px;
+  margin: 20px 0;
+}
+
+.filho-absolute {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: #f97316;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 2px solid #c2410c;
+}
+
+.texto-pai {
+  margin-top: 60px;
+}
+
+/* ============================================
+   4. FIXED NO CABEÇALHO
+   ============================================ */
+.cabecalho-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0f172a;
+  color: white;
+  padding: 14px 24px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   5. STICKY NO MENU DE NAVEGAÇÃO
+   ============================================ */
+.menu-sticky {
+  position: sticky;
+  top: 0;
+  background: #1e293b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin: 30px 0 20px;
+  font-weight: 600;
+  z-index: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   6. ELEMENTO ABSOLUTO FORA DA TELA
+   ============================================ */
+.pai-fora-tela {
+  position: relative;
+  background: #f1f5f9;
+  border: 2px solid #94a3b8;
+  border-radius: 16px;
+  padding: 30px;
+  min-height: 120px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.fora-tela {
+  position: absolute;
+  top: -80px;
+  left: -120px;
+  background: #ef4444;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+/* ============================================
+   7. OVERLAY COM FIXED
+   ============================================ */
+.overlay-fixed {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(3px);
+  z-index: 4000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#overlay:target {
+  display: flex;
+}
+
+.overlay-fixed h2 {
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+}
+
+.overlay-fixed p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 16px 0;
+}
+
+.overlay-fixed a {
+  color: #facc15;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background: #1e293b;
+  padding: 14px 28px;
+  border-radius: 50px;
+  margin-top: 24px;
+  border: 2px solid #facc15;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.overlay-fixed a:hover {
+  background: #facc15;
+  color: #0f172a;
+}
+
+.btn-overlay {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 0;
+  border: 2px solid #1d4ed8;
+  transition: 0.2s;
+}
+
+.btn-overlay:hover {
+  background: #2563eb;
+}
+
+/* ============================================
+   8. RELATIVE DENTRO DE ABSOLUTE
+   ============================================ */
+.exemplo-relative-absolute {
+  position: relative;
+  height: 380px;
+  background: #faf5ff;
+  border-radius: 16px;
+  margin: 20px 0;
+  border: 2px dashed #a855f7;
+}
+
+.pai-absolute {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  width: 300px;
+  background: #f3e8ff;
+  border: 3px solid #a855f7;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.filho-relative-dentro-absolute {
+  position: relative;
+  top: 20px;
+  left: 40px;
+  background: #d8b4fe;
+  border: 2px solid #7e22ce;
+  border-radius: 10px;
+  padding: 12px;
+  color: #4c1d95;
+  font-weight: 600;
+}
+
+/* ============================================
+   9. BOTÃO FIXED NO CANTO INFERIOR DIREITO
+   ============================================ */
+.botao-fixed {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #10b981;
+  color: white;
+  border: 2px solid #047857;
+  border-radius: 60px;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  z-index: 1500;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.botao-fixed:hover {
+  background: #059669;
+  transform: scale(1.05);
+}
+
+/* ============================================
+   10. SCROLL COM STICKY
+   ============================================ */
+.sticky-conteudo {
+  position: sticky;
+  top: 10px;
+  background: #f59e0b;
+  color: #1e1e2f;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 20px;
+  border: 2px solid #b45309;
+  z-index: 400;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.conteudo-rolavel {
+  background: linear-gradient(145deg, #e2e8f0, #f8fafc);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #cbd5e1;
+  scroll-behavior: smooth;
+}
+
+.conteudo-rolavel p {
+  margin: 12px 0;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+}
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+.rodape {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  color: #64748b;
+  border-top: 2px solid #e2e8f0;
+}
+
+.rodape-pequeno {
+  font-size: 0.9rem;
+}

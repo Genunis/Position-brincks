@@ -1,0 +1,64 @@
+1. Exercício: Elemento Estático
+● Objetivo: Crie uma página simples com vários elementos (divs, por exemplo), e
+defina todos com position: static (que é o padrão).
+● O que praticar: Verifique como os elementos se comportam no fluxo normal da
+página e como a ordem deles afeta o layout.
+
+2. Exercício: Elemento Relativo
+● Objetivo: Crie um box com position: relative e mova ele 20px para a direita e
+50px para baixo utilizando left e top.
+● O que praticar: Como o elemento mantém seu espaço original enquanto é movido
+visualmente.
+
+3. Exercício: Elemento Absoluto
+● Objetivo: Crie uma div com position: absolute dentro de uma div pai com
+position: relative. Use top, left, right, ou bottom para posicionar o
+elemento dentro da div pai.
+● O que praticar: Como o elemento absoluto é posicionado em relação ao pai
+mais próximo com position diferente de static.
+
+4. Exercício: Fixed no Cabeçalho
+● Objetivo: Crie uma página com um cabeçalho fixo usando position: fixed e
+defina o cabeçalho para ficar no topo da página enquanto o usuário rola a página
+para baixo.
+● O que praticar: Como o fixed mantém o elemento visível durante o rolar da
+página.
+
+5. Exercício: Sticky no Menu de Navegação
+● Objetivo: Crie um menu de navegação com position: sticky e faça com que
+ele "grude" no topo da página quando o usuário rolar para baixo.
+● O que praticar: Como o sticky funciona quando o usuário rola a página. Defina o
+top para que ele grude no topo quando o menu atingir esse ponto.
+
+6. Exercício: Elemento Absoluto Fora da Tela
+● Objetivo: Posicione uma div com position: absolute fora da tela (usando
+valores negativos em top, left, right ou bottom).
+● O que praticar: Como o elemento pode ser movido para fora da tela e ainda
+continuar no fluxo de layout.
+
+7. Exercício: Overlay com position: fixed
+● Objetivo: Crie um efeito de overlay com uma div que ocupa toda a tela com
+position: fixed, e faça com que ela tenha um fundo semi-transparente.
+● O que praticar: Como usar fixed para criar camadas sobre o conteúdo da página,
+mantendo o conteúdo atrás fixo.
+
+8. Exercício: Elemento relative Dentro de absolute
+● Objetivo: Coloque uma div com position: relative dentro de outra com
+position: absolute. Tente posicionar a div relativa em um ponto específico
+dentro da div absoluta.
+● O que praticar: Como o posicionamento relativo se comporta dentro de um
+elemento com absolute, e como os valores de top, left afetam o
+posicionamento dentro do elemento pai.
+
+9. Exercício: Exibição de um Botão com fixed
+● Objetivo: Coloque um botão com position: fixed no canto inferior direito da
+tela, para que ele sempre fique visível ao rolar a página.
+● O que praticar: Como usar position: fixed para elementos de controle, como
+botões de navegação ou "voltar ao topo".
+
+10. Exercício: Scroll com Sticky
+● Objetivo: Crie uma div com position: sticky e um conteúdo grande o
+suficiente para rolar a página. O elemento deve ficar fixo no topo enquanto o usuário
+rola o conteúdo para baixo.
+● O que praticar: Como o comportamento do sticky pode ser combinado com
+conteúdo de rolagem para criar menus ou cabeçalhos interativos.
